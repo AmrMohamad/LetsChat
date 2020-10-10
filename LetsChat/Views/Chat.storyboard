@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DNn-ZQ-ijq">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="6oP-Yl-sba">
+            <objects>
+                <viewController id="DNn-ZQ-ijq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KtS-Im-uiI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbe-jY-q7r">
+                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TL4-eW-O8U">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TL4-eW-O8U" id="aDX-vp-WXx">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-bv-L6A" userLabel="BotView">
+                                <rect key="frame" x="0.0" y="792" width="414" height="70"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a message..." clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hOo-zs-FiK">
+                                        <rect key="frame" x="18" y="7.5" width="300" height="55"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="T4X-Zh-KP6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yd9-4Y-9lk">
+                                        <rect key="frame" x="336" y="5" width="60" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="a9f-4f-LXw"/>
+                                            <constraint firstAttribute="width" constant="60" id="xsf-Yb-IGc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <color key="tintColor" name="LightPurple"/>
+                                        <state key="normal" image="paperplane.fill" catalog="system">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="36"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="yd9-4Y-9lk" firstAttribute="leading" secondItem="hOo-zs-FiK" secondAttribute="trailing" constant="18" id="656-0X-qpr"/>
+                                    <constraint firstItem="hOo-zs-FiK" firstAttribute="centerY" secondItem="ucb-bv-L6A" secondAttribute="centerY" id="OgT-X8-xdq"/>
+                                    <constraint firstItem="hOo-zs-FiK" firstAttribute="leading" secondItem="ucb-bv-L6A" secondAttribute="leading" constant="18" id="SCS-D3-jO7"/>
+                                    <constraint firstItem="yd9-4Y-9lk" firstAttribute="centerY" secondItem="ucb-bv-L6A" secondAttribute="centerY" id="Udd-dm-3a9"/>
+                                    <constraint firstAttribute="trailing" secondItem="yd9-4Y-9lk" secondAttribute="trailing" constant="18" id="is6-uc-VaF"/>
+                                    <constraint firstAttribute="height" constant="70" id="rvO-oL-OXa"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" name="Purple"/>
+                        <constraints>
+                            <constraint firstItem="rbe-jY-q7r" firstAttribute="leading" secondItem="KtS-Im-uiI" secondAttribute="leading" id="6Um-RI-hce"/>
+                            <constraint firstItem="ucb-bv-L6A" firstAttribute="trailing" secondItem="ztW-0d-hEJ" secondAttribute="trailing" id="D58-6x-sxz"/>
+                            <constraint firstItem="ucb-bv-L6A" firstAttribute="leading" secondItem="ztW-0d-hEJ" secondAttribute="leading" id="GSg-ci-7tw"/>
+                            <constraint firstAttribute="trailing" secondItem="rbe-jY-q7r" secondAttribute="trailing" id="QlX-Tq-kPc"/>
+                            <constraint firstItem="ucb-bv-L6A" firstAttribute="top" secondItem="rbe-jY-q7r" secondAttribute="bottom" id="RMN-0E-cen"/>
+                            <constraint firstItem="ucb-bv-L6A" firstAttribute="bottom" secondItem="ztW-0d-hEJ" secondAttribute="bottom" id="jmY-UO-mlp"/>
+                            <constraint firstItem="rbe-jY-q7r" firstAttribute="top" secondItem="ztW-0d-hEJ" secondAttribute="top" id="yfh-ws-t3G"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ztW-0d-hEJ"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ck-AG-iYc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="153.34821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+        <namedColor name="LightPurple">
+            <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Purple">
+            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

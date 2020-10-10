@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uuP-tP-ojl">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="1oZ-eI-QAV">
+            <objects>
+                <viewController id="uuP-tP-ojl" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i2u-rN-X2l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="dew-jT-wrT">
+                                <rect key="frame" x="25" y="94" width="364" height="268"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Q3Y-Df-YXf">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="208"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NeU-n3-bYL">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="Ofr-x3-ygR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aI-2H-erg">
+                                                <rect key="frame" x="0.0" y="76" width="364" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="ceT-XR-gD0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3ie-Zs-FCw">
+                                                <rect key="frame" x="0.0" y="152" width="364" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="s6z-wp-fiA"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KCB-95-Ifx">
+                                        <rect key="frame" x="0.0" y="228" width="364" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="JTh-Vf-RrI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Register">
+                                            <color key="titleColor" name="Blue"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="LightBlue"/>
+                        <constraints>
+                            <constraint firstItem="dew-jT-wrT" firstAttribute="leading" secondItem="4Eb-Be-7UV" secondAttribute="leading" constant="25" id="kva-5a-vjX"/>
+                            <constraint firstItem="dew-jT-wrT" firstAttribute="top" secondItem="4Eb-Be-7UV" secondAttribute="top" constant="50" id="qDS-pi-xxA"/>
+                            <constraint firstItem="4Eb-Be-7UV" firstAttribute="trailing" secondItem="dew-jT-wrT" secondAttribute="trailing" constant="25" id="qLc-i4-ed1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4Eb-Be-7UV"/>
+                    </view>
+                    <connections>
+                        <segue destination="Ucp-lv-IxU" kind="show" identifier="RegisterToChat" id="vUa-io-aHc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="472-1h-6EZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="922" y="299"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="yGL-J4-bVd">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="Ucp-lv-IxU" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="IDD-f8-fQf"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6xd-ch-tuG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1456" y="299"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Blue">
+            <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LightBlue">
+            <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

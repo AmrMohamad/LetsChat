@@ -14,6 +14,9 @@
 		2DBA18B72530F78B00876744 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA18B62530F78B00876744 /* Assets.xcassets */; };
 		2DBA18BA2530F78B00876744 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA18B82530F78B00876744 /* LaunchScreen.storyboard */; };
 		2DBA18C225312D5F00876744 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 2DBA18C125312D5E00876744 /* README.md */; };
+		2DEC32C625323DD40086DD70 /* LogIn.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC32C525323DD40086DD70 /* LogIn.storyboard */; };
+		2DEC32C825323E6A0086DD70 /* Register.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC32C725323E6A0086DD70 /* Register.storyboard */; };
+		2DEC32CA2532404A0086DD70 /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DEC32C92532404A0086DD70 /* Chat.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		2DBA18B92530F78B00876744 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DBA18BB2530F78B00876744 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DBA18C125312D5E00876744 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		2DEC32C525323DD40086DD70 /* LogIn.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogIn.storyboard; sourceTree = "<group>"; };
+		2DEC32C725323E6A0086DD70 /* Register.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Register.storyboard; sourceTree = "<group>"; };
+		2DEC32C92532404A0086DD70 /* Chat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,15 +65,42 @@
 		2DBA18AC2530F78B00876744 /* LetsChat */ = {
 			isa = PBXGroup;
 			children = (
+				2DEC32C425323D8B0086DD70 /* Models */,
+				2DEC32C325323D6A0086DD70 /* Controllers */,
+				2DEC32C225323D570086DD70 /* Views */,
 				2DBA18AD2530F78B00876744 /* AppDelegate.swift */,
 				2DBA18AF2530F78B00876744 /* SceneDelegate.swift */,
 				2DBA18B12530F78B00876744 /* ViewController.swift */,
-				2DBA18B32530F78B00876744 /* Main.storyboard */,
 				2DBA18B62530F78B00876744 /* Assets.xcassets */,
 				2DBA18B82530F78B00876744 /* LaunchScreen.storyboard */,
 				2DBA18BB2530F78B00876744 /* Info.plist */,
 			);
 			path = LetsChat;
+			sourceTree = "<group>";
+		};
+		2DEC32C225323D570086DD70 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2DBA18B32530F78B00876744 /* Main.storyboard */,
+				2DEC32C525323DD40086DD70 /* LogIn.storyboard */,
+				2DEC32C725323E6A0086DD70 /* Register.storyboard */,
+				2DEC32C92532404A0086DD70 /* Chat.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2DEC32C325323D6A0086DD70 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2DEC32C425323D8B0086DD70 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,10 +161,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DEC32CA2532404A0086DD70 /* Chat.storyboard in Resources */,
 				2DBA18BA2530F78B00876744 /* LaunchScreen.storyboard in Resources */,
 				2DBA18B72530F78B00876744 /* Assets.xcassets in Resources */,
 				2DBA18C225312D5F00876744 /* README.md in Resources */,
 				2DBA18B52530F78B00876744 /* Main.storyboard in Resources */,
+				2DEC32C625323DD40086DD70 /* LogIn.storyboard in Resources */,
+				2DEC32C825323E6A0086DD70 /* Register.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
