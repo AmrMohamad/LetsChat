@@ -5,7 +5,7 @@
 LetsChat is built an app based on firebase as a backend database to store and retrieve our messages from the cloud
 
 
-##What is used
+## What is used
  * Integrated third-party libraries in your app using Cocoapods and Swift Package Manager
  * Stored data in the cloud using Firebase Firestore
  * Used Firebase for user authentication, registration and login
