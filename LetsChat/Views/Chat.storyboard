@@ -47,10 +47,10 @@
                                             <constraint firstAttribute="height" constant="60" id="a9f-4f-LXw"/>
                                             <constraint firstAttribute="width" constant="60" id="xsf-Yb-IGc"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="tintColor" name="LightPurple"/>
                                         <state key="normal" image="paperplane.fill" catalog="system">
-                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="36"/>
+                                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="37"/>
                                         </state>
                                     </button>
                                 </subviews>
