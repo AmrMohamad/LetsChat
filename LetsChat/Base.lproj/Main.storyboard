@@ -75,7 +75,50 @@
                     <view key="view" contentMode="scaleToFill" id="Ocy-ks-wTP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Kby-0u-g8x">
+                                <rect key="frame" x="25" y="94" width="364" height="192"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3MT-Fd-HMS">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="132"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wme-Qc-jY7">
+                                                <rect key="frame" x="0.0" y="0.0" width="364" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="N01-g3-VDB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mHy-Um-U0k">
+                                                <rect key="frame" x="0.0" y="76" width="364" height="56"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="56" id="k3R-YB-JGm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WK5-b6-o2J">
+                                        <rect key="frame" x="0.0" y="152" width="364" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="kcJ-He-zKm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" name="LightBlue"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="Blue"/>
+                        <constraints>
+                            <constraint firstItem="Kby-0u-g8x" firstAttribute="top" secondItem="iop-TG-98f" secondAttribute="top" constant="50" id="1QP-9h-Mon"/>
+                            <constraint firstItem="Kby-0u-g8x" firstAttribute="leading" secondItem="iop-TG-98f" secondAttribute="leading" constant="25" id="FBE-GR-lyh"/>
+                            <constraint firstItem="iop-TG-98f" firstAttribute="trailing" secondItem="Kby-0u-g8x" secondAttribute="trailing" constant="25" id="Gn4-uy-HU7"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="iop-TG-98f"/>
                     </view>
                 </viewController>
@@ -91,8 +134,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-l2-8TE">
-                                <rect key="frame" x="25" y="94" width="364" height="267"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-l2-8TE">
+                                <rect key="frame" x="25" y="94" width="364" height="268"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Xwo-GR-ufH">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="208"/>
@@ -124,7 +167,7 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8fT-jk-yry">
-                                        <rect key="frame" x="0.0" y="227" width="364" height="40"/>
+                                        <rect key="frame" x="0.0" y="228" width="364" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="soZ-ls-mrK"/>
                                         </constraints>
