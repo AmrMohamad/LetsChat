@@ -45,7 +45,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="evQ-n2-KuI"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" name="LightBlue"/>
                                         </state>
