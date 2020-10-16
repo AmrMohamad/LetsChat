@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2DB534992539E6FB008A8B46 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB534982539E6FB008A8B46 /* WelcomeViewController.swift */; };
+		2DB5349B2539F9B6008A8B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DB5349A2539F9B6008A8B46 /* GoogleService-Info.plist */; };
 		2DBA18AE2530F78B00876744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA18AD2530F78B00876744 /* AppDelegate.swift */; };
 		2DBA18B02530F78B00876744 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA18AF2530F78B00876744 /* SceneDelegate.swift */; };
 		2DBA18B22530F78B00876744 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA18B12530F78B00876744 /* ViewController.swift */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		2DB534982539E6FB008A8B46 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		2DB5349A2539F9B6008A8B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DBA18AA2530F78B00876744 /* LetsChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DBA18AD2530F78B00876744 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DBA18AF2530F78B00876744 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +85,7 @@
 				2DBA18B62530F78B00876744 /* Assets.xcassets */,
 				2DBA18B82530F78B00876744 /* LaunchScreen.storyboard */,
 				2DBA18BB2530F78B00876744 /* Info.plist */,
+				2DB5349A2539F9B6008A8B46 /* GoogleService-Info.plist */,
 			);
 			path = LetsChat;
 			sourceTree = "<group>";
@@ -191,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DEC32CA2532404A0086DD70 /* Chat.storyboard in Resources */,
+				2DB5349B2539F9B6008A8B46 /* GoogleService-Info.plist in Resources */,
 				2DBA18BA2530F78B00876744 /* LaunchScreen.storyboard in Resources */,
 				2DBA18B72530F78B00876744 /* Assets.xcassets in Resources */,
 				2DBA18C225312D5F00876744 /* README.md in Resources */,

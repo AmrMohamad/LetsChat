@@ -8,5 +8,8 @@ target 'LetsChat' do
   # Pods for LetsChat
   
   pod 'CLTypingLabel', '~> 0.4.0'
+  
+  pod 'Firebase/Auth'
+  pod 'Firebase/Firestore'
 
 end
