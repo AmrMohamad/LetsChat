@@ -7,11 +7,18 @@
 //
 
 import UIKit
+import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
+    @IBOutlet weak var titleTextWelcomeScreen: CLTypingLabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        titleTextWelcomeScreen.text = "👋🏻 LetsChat"
+        
 
         // Do any additional setup after loading the view.
     }
