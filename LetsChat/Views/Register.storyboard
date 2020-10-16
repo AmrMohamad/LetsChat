@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register View Controller-->
         <scene sceneID="1oZ-eI-QAV">
             <objects>
-                <viewController id="uuP-tP-ojl" sceneMemberID="viewController">
+                <viewController id="uuP-tP-ojl" customClass="RegisterViewController" customModule="LetsChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="i2u-rN-X2l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,7 +28,7 @@
                                                     <constraint firstAttribute="height" constant="56" id="Ofr-x3-ygR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4aI-2H-erg">
                                                 <rect key="frame" x="0.0" y="76" width="364" height="56"/>
@@ -70,6 +70,9 @@
                         <viewLayoutGuide key="safeArea" id="4Eb-Be-7UV"/>
                     </view>
                     <connections>
+                        <outlet property="confirmTextField" destination="3ie-Zs-FCw" id="0sc-jO-xKZ"/>
+                        <outlet property="emailTextField" destination="NeU-n3-bYL" id="BA0-Te-kdt"/>
+                        <outlet property="passwordTextField" destination="4aI-2H-erg" id="GjD-Ho-zVq"/>
                         <segue destination="Ucp-lv-IxU" kind="show" identifier="RegisterToChat" id="vUa-io-aHc"/>
                     </connections>
                 </viewController>

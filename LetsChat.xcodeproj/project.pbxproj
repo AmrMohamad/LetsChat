@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D979441253A2CB800AA9C9E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D979440253A2CB800AA9C9E /* RegisterViewController.swift */; };
 		2DB534992539E6FB008A8B46 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB534982539E6FB008A8B46 /* WelcomeViewController.swift */; };
 		2DB5349B2539F9B6008A8B46 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DB5349A2539F9B6008A8B46 /* GoogleService-Info.plist */; };
 		2DBA18AE2530F78B00876744 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA18AD2530F78B00876744 /* AppDelegate.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D979440253A2CB800AA9C9E /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		2DB534982539E6FB008A8B46 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		2DB5349A2539F9B6008A8B46 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2DBA18AA2530F78B00876744 /* LetsChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				2DB534982539E6FB008A8B46 /* WelcomeViewController.swift */,
+				2D979440253A2CB800AA9C9E /* RegisterViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DBA18B22530F78B00876744 /* ViewController.swift in Sources */,
+				2D979441253A2CB800AA9C9E /* RegisterViewController.swift in Sources */,
 				2DB534992539E6FB008A8B46 /* WelcomeViewController.swift in Sources */,
 				2DBA18AE2530F78B00876744 /* AppDelegate.swift in Sources */,
 				2DBA18B02530F78B00876744 /* SceneDelegate.swift in Sources */,

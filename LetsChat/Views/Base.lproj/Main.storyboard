@@ -57,6 +57,9 @@
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="50"/>
                                 <color key="textColor" name="Blue"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="centerText" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
