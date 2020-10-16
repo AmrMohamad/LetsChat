@@ -57,6 +57,9 @@
                                         <state key="normal" title="Register">
                                             <color key="titleColor" name="Blue"/>
                                         </state>
+                                        <connections>
+                                            <action selector="registerAction:" destination="uuP-tP-ojl" eventType="touchUpInside" id="v4X-05-yR2"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
