@@ -42,6 +42,9 @@ class RegisterViewController: UIViewController {
                         print(e.localizedDescription)
                     } else{
                         self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                        
+//                        let homePage = self.storyboard?.instantiateViewController(withIdentifier: "tabBarVC") as! tabBarHomeViewController
+//                        self.navigationController?.pushViewController(homePage, animated: true)
                     }
                 }
             }
