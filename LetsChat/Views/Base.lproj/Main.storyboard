@@ -108,7 +108,7 @@
         <!--Log In-->
         <scene sceneID="Mhu-uO-RrQ">
             <objects>
-                <viewController id="XHz-ym-Peo" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="XHz-ym-Peo" customClass="LoginViewController" customModule="LetsChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t5L-Ya-tWn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -159,6 +159,10 @@
                         <viewLayoutGuide key="safeArea" id="5YZ-If-HcY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="yoy-um-4ye"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="lxS-V6-v48" id="3sl-Lc-ppn"/>
+                        <outlet property="passwordTextField" destination="Jwl-tL-Mg7" id="ABc-Yg-7Hd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHE-bk-ahk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
