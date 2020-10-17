@@ -146,6 +146,9 @@
                                         <state key="normal" title="Log In">
                                             <color key="titleColor" name="LightBlue"/>
                                         </state>
+                                        <connections>
+                                            <action selector="loginAction:" destination="XHz-ym-Peo" eventType="touchUpInside" id="yff-M7-0nI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
