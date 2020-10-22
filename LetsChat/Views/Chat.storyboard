@@ -114,7 +114,11 @@
                         <viewLayoutGuide key="safeArea" id="ztW-0d-hEJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="k1f-a2-xon">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="GeZ-Mh-VTZ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="GeZ-Mh-VTZ">
+                            <connections>
+                                <action selector="logOutAction:" destination="DNn-ZQ-ijq" id="UGV-V8-voW"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="hOo-zs-FiK" id="oRP-Xp-GIL"/>

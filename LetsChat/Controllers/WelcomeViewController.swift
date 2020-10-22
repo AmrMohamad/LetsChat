@@ -23,6 +23,11 @@ class WelcomeViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = true
+        //navigationItem.hidesBackButton = true
+    }
+    
     
     
     /*

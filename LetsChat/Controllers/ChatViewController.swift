@@ -15,11 +15,41 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationItem.hidesBackButton = true
+    }
+    
     @IBAction func sendAction(_ sender: UIButton) {
+    }
+    @IBAction func logOutAction(_ sender: UIBarButtonItem) {
+        do {
+            try Auth.auth().signOut()
+            navigationController?.popToRootViewController(animated: true)
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let welcomeScreen = storyboard.instantiateViewController(identifier: "WelcomeViewController") //as! WelcomeViewController
+//            welcomeScreen.modalPresentationStyle = .fullScreen
+//            welcomeScreen.navigationController?.navigationItem.hidesBackButton = false
+//            welcomeScreen.navigationController?.navigationBar.prefersLargeTitles = true
+//            self.present(welcomeScreen, animated: true, completion: nil)
+            
+            
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+//            vc.modalPresentationStyle = .automatic
+//            self.navigationController?.pushViewController(vc, animated: true)
+                //self.navigationController?.isNavigationBarHidden = true
+//            vc.navigationItem.hidesBackButton = true
+        
+                
+        } catch let signOutError as NSError {
+            print ("Error signing out: %@", signOutError)
+        }
     }
     /*
     // MARK: - Navigation
