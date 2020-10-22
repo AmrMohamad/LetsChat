@@ -13,9 +13,16 @@ class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
+    
+    var messages: [Message] = [
+        Message(sender: "test1@mail.com", body: "Hi!"),
+        Message(sender: "test2@mail.com", body: "Hi !!")
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        title = Constants.appName
+        tableView.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -61,4 +68,18 @@ class ChatViewController: UIViewController {
     }
     */
 
+}
+
+extension ChatViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath)
+        cell.textLabel?.text = messages[indexPath.row].body
+        return cell
+    }
+    
+    
 }
