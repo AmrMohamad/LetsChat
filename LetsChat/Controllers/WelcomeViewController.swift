@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        titleTextWelcomeScreen.text = "👋🏻 LetsChat"
+        titleTextWelcomeScreen.text = Constants.appName
         
 
         // Do any additional setup after loading the view.
