@@ -38,7 +38,7 @@ class LoginViewController: UIViewController {
                     print(e)
                 } else{
                     
-                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
                     
                     //let storyboard = UIStoryboard(name: "Chat", bundle: nil)
                     //let vc = storyboard.instantiateViewController(withIdentifier: "NavChatViewController")
