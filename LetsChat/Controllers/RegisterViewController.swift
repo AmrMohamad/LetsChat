@@ -41,22 +41,22 @@ class RegisterViewController: UIViewController {
                         
                         print(e.localizedDescription)
                     } else{
-//                        self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+                        self.performSegue(withIdentifier: "RegisterToChat", sender: self)
                         
                         
                         
-                        let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-                        let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
-                        vc.modalPresentationStyle = .fullScreen
-                        self.navigationController?.pushViewController(vc, animated: true)
-                        self.navigationController?.isNavigationBarHidden = true
+                        //let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+                        //let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
+                        //vc.modalPresentationStyle = .fullScreen
+                        //self.navigationController?.pushViewController(vc, animated: true)
+                        //self.navigationController?.isNavigationBarHidden = true
 
                         
                         
-//                        let chatPage = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-//                        self.navigationController?.pushViewController(chatPage, animated: false)
-//                        chatPage.modalPresentationStyle = .fullScreen
-//                        self.navigationController?.popToViewController(chatPage, animated: true)
+                        //let chatPage = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+                        //self.navigationController?.pushViewController(chatPage, animated: false)
+                        //chatPage.modalPresentationStyle = .fullScreen
+                        //self.navigationController?.popToViewController(chatPage, animated: true)
                     }
                 }
             }

@@ -21,23 +21,6 @@ class ChatViewController: UIViewController {
     
     @IBAction func sendAction(_ sender: UIButton) {
     }
-    
-    @IBAction func logOutAction(_ sender: UIBarButtonItem) {
-    
-        do {
-                  try Auth.auth().signOut()
-                    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                    let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
-                    vc.modalPresentationStyle = .automatic
-                    self.navigationController?.pushViewController(vc, animated: true)
-        //            self.navigationController?.isNavigationBarHidden = true
-                    
-                } catch let signOutError as NSError {
-                  print ("Error signing out: %@", signOutError)
-                }
-          
-        
-    }
     /*
     // MARK: - Navigation
 

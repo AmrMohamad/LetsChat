@@ -89,7 +89,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JCC-M4-elY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="q2Y-t9-24D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="104.5"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Purple"/>
                         <textAttributes key="largeTitleTextAttributes">
@@ -165,11 +165,22 @@
                     <connections>
                         <outlet property="emailTextField" destination="lxS-V6-v48" id="3sl-Lc-ppn"/>
                         <outlet property="passwordTextField" destination="Jwl-tL-Mg7" id="ABc-Yg-7Hd"/>
+                        <segue destination="z4a-Cm-j4l" kind="show" identifier="LoginToChat" id="s5B-oV-21E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YHE-bk-ahk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1103" y="230"/>
+        </scene>
+        <!--Chat-->
+        <scene sceneID="2Y8-IJ-dFJ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Chat" id="z4a-Cm-j4l" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T5j-UQ-Ejw"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Vk-Cj-FfA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2012" y="230"/>
         </scene>
         <!--Register-->
         <scene sceneID="iIC-kc-zZl">
@@ -240,6 +251,7 @@
                         <outlet property="confirmTextField" destination="0xp-qo-V5n" id="l4K-zp-Og6"/>
                         <outlet property="emailTextField" destination="1Df-Rp-bp3" id="dwA-u1-nCK"/>
                         <outlet property="passwordTextField" destination="Qdw-j9-RTZ" id="zKu-fQ-9jo"/>
+                        <segue destination="z4a-Cm-j4l" kind="show" identifier="RegisterToChat" id="CiN-gO-owx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lZu-e7-EPx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -247,15 +259,18 @@
             <point key="canvasLocation" x="2012" y="-469"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="s5B-oV-21E"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="Blue">
             <color red="0.16500000655651093" green="0.77999997138977051" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="LightBlue">
-            <color red="0.92156862745098034" green="0.98039215686274506" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Purple">
-            <color red="0.67450980392156867" green="0.43529411764705883" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -15,6 +15,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Log In"
+        
 
         // Do any additional setup after loading the view.
     }
@@ -35,13 +37,16 @@ class LoginViewController: UIViewController {
                     
                     print(e)
                 } else{
-//                    let storyboard = UIStoryboard(name: "Chat", bundle: nil)
-//                    let vc = storyboard.instantiateViewController(withIdentifier: "NavChatViewController")
-//                    vc.modalPresentationStyle = .fullScreen
-//                    self.navigationController?.pushViewController(vc, animated: true)
-//                    self.navigationController?.isNavigationBarHidden = true
-//                    let chatPage = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
-//                    self.navigationController?.pushViewController(chatPage, animated: true)
+                    
+                    self.performSegue(withIdentifier: "LoginToChat", sender: self)
+                    
+                    //let storyboard = UIStoryboard(name: "Chat", bundle: nil)
+                    //let vc = storyboard.instantiateViewController(withIdentifier: "NavChatViewController")
+                    //vc.modalPresentationStyle = .fullScreen
+                    //self.navigationController?.pushViewController(vc, animated: true)
+                    //self.navigationController?.isNavigationBarHidden = true
+                    //let chatPage = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+                    //self.navigationController?.pushViewController(chatPage, animated: true)
                 }
             }
         }

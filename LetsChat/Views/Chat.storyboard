@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7EF-xd-DjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DNn-ZQ-ijq">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -11,7 +11,7 @@
         <!--👋🏻 LetsChat-->
         <scene sceneID="Awb-nw-XYn">
             <objects>
-                <viewController id="hcV-D1-irs" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ConversationViewController" modalPresentationStyle="fullScreen" id="hcV-D1-irs" customClass="ConversationViewController" customModule="LetsChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Swa-g5-3TN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +30,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9Q4-qx-Xq9"/>
                     </view>
-                    <navigationItem key="navigationItem" title="👋🏻 LetsChat" id="ST4-xS-LhT"/>
+                    <navigationItem key="navigationItem" title="👋🏻 LetsChat" id="ST4-xS-LhT">
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="4FS-xP-wgz">
+                            <connections>
+                                <action selector="logOutAction:" destination="hcV-D1-irs" id="Cnl-wY-afj"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cw-tI-qh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -108,11 +114,7 @@
                         <viewLayoutGuide key="safeArea" id="ztW-0d-hEJ"/>
                     </view>
                     <navigationItem key="navigationItem" id="k1f-a2-xon">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="GeZ-Mh-VTZ">
-                            <connections>
-                                <action selector="logOutAction:" destination="DNn-ZQ-ijq" id="aqh-2q-y9Z"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="GeZ-Mh-VTZ"/>
                     </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="hOo-zs-FiK" id="oRP-Xp-GIL"/>
@@ -126,7 +128,7 @@
         <!--Navigation Controller-->
         <scene sceneID="qNo-nn-mYH">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7EF-xd-DjE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="7EF-xd-DjE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rwh-Qn-b14">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
