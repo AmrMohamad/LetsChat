@@ -50,7 +50,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻 LetsChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua9-VE-cdh" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="207" y="418" width="0.0" height="60"/>
+                                <rect key="frame" x="61" y="418" width="292.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lAz-wj-QfV"/>
                                 </constraints>
@@ -114,7 +114,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MmP-57-g2O">
-                                <rect key="frame" x="25" y="198.5" width="364" height="192"/>
+                                <rect key="frame" x="25" y="190" width="364" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-rA-WTi">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="132"/>
