@@ -11,5 +11,6 @@ target 'LetsChat' do
   
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.6'
 
 end
