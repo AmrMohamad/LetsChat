@@ -21,10 +21,10 @@
                         <rect key="frame" x="194" y="8" width="138" height="53"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xRh-Zb-3nc">
-                                <rect key="frame" x="2" y="2" width="91" height="50"/>
+                                <rect key="frame" x="2" y="2" width="91" height="51"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mai-H6-ctj">
-                                        <rect key="frame" x="4" y="3" width="83" height="44"/>
+                                        <rect key="frame" x="4" y="3" width="83" height="45"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="6nV-hp-FUh"/>
                                         </constraints>
@@ -43,7 +43,7 @@
                                 </constraints>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Me" translatesAutoresizingMaskIntoConstraints="NO" id="prN-Wb-aix">
-                                <rect key="frame" x="103" y="17" width="35" height="35"/>
+                                <rect key="frame" x="103" y="18" width="35" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="BtG-X6-7no"/>
                                     <constraint firstAttribute="width" constant="35" id="RvF-kZ-qRG"/>

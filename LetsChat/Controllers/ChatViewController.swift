@@ -72,9 +72,11 @@ class ChatViewController: UIViewController {
                     print("There was an issue saving data to firestore \(e)")
                 }else{
                     print("Everything is fuckin good")
+                    DispatchQueue.main.async {
+                        self.messageTextField.text = ""
+                    }
                 }
             }
-            messageTextField.text = ""
         }
     }
     @IBAction func logOutAction(_ sender: UIBarButtonItem) {

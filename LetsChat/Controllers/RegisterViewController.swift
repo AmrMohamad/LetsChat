@@ -67,7 +67,7 @@ class RegisterViewController: UIViewController {
             
             let oKAction = UIAlertAction(title: "Ok", style: .default)
             { _ in
-                self.navigationController?.popViewController(animated: true)
+                //self.navigationController?.popViewController(animated: true)
             }
             
             alertControllerOK.addAction(oKAction)
