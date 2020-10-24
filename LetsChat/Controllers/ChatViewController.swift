@@ -17,10 +17,7 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     
     
-    var messages: [Message] = [
-        Message(sender: "test1@mail.com", body: "Hi!"),
-        Message(sender: "test2@mail.com", body: "Hi !")
-    ]
+    var messages: [Message] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,20 +25,48 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "MessageCell")
-
+        
+        loadMessage ()
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(_ animated: Bool) {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.hidesBackButton = true
+        
+    }
+    
+    func loadMessage (){
+        db.collection("messages")
+            .order(by: "date")
+            .addSnapshotListener{ (querySnapshot, error) in
+            self.messages = []
+            if let e = error{
+                print("There was an issue retrieving data from Firestore. \(e)")
+            }else{
+                if let snapshotDoc = querySnapshot?.documents {
+                    for doc in snapshotDoc {
+                        let msgData = doc.data()
+                        if let msgSender = msgData["sender"] as? String,
+                            let msgBody   = msgData["body"] as? String {
+                            let newMsg = Message(sender: msgSender, body: msgBody)
+                            self.messages.append(newMsg)
+                            DispatchQueue.main.async {
+                                self.tableView.reloadData()
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
     
     @IBAction func sendAction(_ sender: UIButton) {
         if let messageBody = messageTextField.text , let messageSender = Auth.auth().currentUser?.email {
             db.collection("messages").addDocument(data: [
                 "sender" : messageSender,
-                "body"   : messageBody
+                "body"   : messageBody,
+                "date"   : Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error{
                     print("There was an issue saving data to firestore \(e)")

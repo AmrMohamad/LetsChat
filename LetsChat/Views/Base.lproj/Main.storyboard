@@ -50,7 +50,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻 LetsChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua9-VE-cdh" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="61" y="418" width="292.5" height="60"/>
+                                <rect key="frame" x="207" y="418" width="0.0" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lAz-wj-QfV"/>
                                 </constraints>
