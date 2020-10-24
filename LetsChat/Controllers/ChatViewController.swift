@@ -24,7 +24,7 @@ class ChatViewController: UIViewController {
         title = Constants.appName
         tableView.dataSource = self
         
-        tableView.register(UINib(nibName: "MessageCell", bundle: nil), forCellReuseIdentifier: "MessageCell")
+        tableView.register(UINib(nibName: "SenderMessageCell", bundle: nil), forCellReuseIdentifier: "SenderMessageCell")
         
         loadMessage ()
         // Do any additional setup after loading the view.
@@ -121,7 +121,7 @@ extension ChatViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "MessageCell", for: indexPath) as! MessageCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SenderMessageCell", for: indexPath) as! SenderMessageCell
         cell.messageBody.text = messages[indexPath.row].body
         return cell
     }

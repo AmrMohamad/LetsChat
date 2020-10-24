@@ -1,18 +1,19 @@
 //
-//  MessageCell.swift
+//  SenderMessageCell.swift
 //  LetsChat
 //
-//  Created by Amr Mohamad on 10/23/20.
+//  Created by Amr Mohamad on 10/24/20.
 //  Copyright © 2020 Amr Mohamad. All rights reserved.
 //
 
 import UIKit
 
-class MessageCell: UITableViewCell {
+class SenderMessageCell: UITableViewCell {
+
     @IBOutlet weak var messageShape: UIView!
     @IBOutlet weak var messageBody: UILabel!
     @IBOutlet weak var imgOfMessageOwner: UIImageView!
-    //var shadowColor: UIColor = UIColor.black
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
