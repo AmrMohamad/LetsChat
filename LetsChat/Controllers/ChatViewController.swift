@@ -25,6 +25,7 @@ class ChatViewController: UIViewController {
         tableView.dataSource = self
         
         tableView.register(UINib(nibName: "SenderMessageCell", bundle: nil), forCellReuseIdentifier: "SenderMessageCell")
+        tableView.register(UINib(nibName: "RecipientMessageCell", bundle: nil), forCellReuseIdentifier: "RecipientMessageCell")
         
         loadMessage ()
         // Do any additional setup after loading the view.
@@ -41,18 +42,20 @@ class ChatViewController: UIViewController {
             .order(by: "date")
             .addSnapshotListener{ (querySnapshot, error) in
             self.messages = []
+                
             if let e = error{
                 print("There was an issue retrieving data from Firestore. \(e)")
             }else{
                 if let snapshotDoc = querySnapshot?.documents {
                     for doc in snapshotDoc {
                         let msgData = doc.data()
-                        if let msgSender = msgData["sender"] as? String,
-                            let msgBody   = msgData["body"] as? String {
+                        if let msgSender = msgData["sender"] as? String , let msgBody   = msgData["body"] as? String {
                             let newMsg = Message(sender: msgSender, body: msgBody)
                             self.messages.append(newMsg)
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: false)
                             }
                         }
                     }
@@ -74,6 +77,7 @@ class ChatViewController: UIViewController {
                     print("Everything is fuckin good")
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""
+                        
                     }
                 }
             }
@@ -121,9 +125,19 @@ extension ChatViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "SenderMessageCell", for: indexPath) as! SenderMessageCell
-        cell.messageBody.text = messages[indexPath.row].body
-        return cell
+        let message = messages[indexPath.row]
+        
+        let senderCell = tableView.dequeueReusableCell(withIdentifier: "SenderMessageCell", for: indexPath) as! SenderMessageCell
+        //cell.messageBody.text = messages[indexPath.row].body
+        let recipientCell = tableView.dequeueReusableCell(withIdentifier: "RecipientMessageCell", for: indexPath) as! RecipientMessageCell
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            senderCell.messageBody.text = message.body
+            return senderCell
+        }else{
+            recipientCell.messageBody.text = message.body
+            return recipientCell
+        }
     }
     
     
