@@ -50,7 +50,7 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋🏻 LetsChat" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ua9-VE-cdh" customClass="CLTypingLabel" customModule="CLTypingLabel">
-                                <rect key="frame" x="207" y="418" width="0.0" height="60"/>
+                                <rect key="frame" x="61" y="418" width="292.5" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="lAz-wj-QfV"/>
                                 </constraints>
@@ -125,7 +125,7 @@
                                                     <constraint firstAttribute="height" constant="56" id="ItR-Km-3Hm"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jwl-tL-Mg7">
                                                 <rect key="frame" x="0.0" y="76" width="364" height="56"/>
@@ -133,7 +133,7 @@
                                                     <constraint firstAttribute="height" constant="56" id="wWT-iQ-drV"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -202,7 +202,7 @@
                                                     <constraint firstAttribute="height" constant="56" id="gME-j1-IFJ"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qdw-j9-RTZ">
                                                 <rect key="frame" x="0.0" y="76" width="364" height="56"/>
@@ -210,7 +210,7 @@
                                                     <constraint firstAttribute="height" constant="56" id="DXY-n6-3RR"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-qo-V5n">
                                                 <rect key="frame" x="0.0" y="152" width="364" height="56"/>
@@ -218,7 +218,7 @@
                                                     <constraint firstAttribute="height" constant="56" id="eNd-Se-QAA"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                         </subviews>
                                     </stackView>
@@ -260,7 +260,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="s5B-oV-21E"/>
+        <segue reference="CiN-gO-owx"/>
     </inferredMetricsTieBreakers>
     <resources>
         <namedColor name="Blue">

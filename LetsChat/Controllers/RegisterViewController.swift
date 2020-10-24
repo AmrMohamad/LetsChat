@@ -63,11 +63,11 @@ class RegisterViewController: UIViewController {
             
         } else {
             
-            let alertControllerOK = UIAlertController.init(title: "Someting Wrong", message: "It's not the same password Please,Check your Password again  ", preferredStyle: .alert)
+            let alertControllerOK = UIAlertController.init(title: "Someting Wrong", message: "It's not the same password Please,Check your Password again", preferredStyle: .alert)
             
             let oKAction = UIAlertAction(title: "Ok", style: .default)
             { _ in
-                self.navigationController?.popToRootViewController(animated: true)
+                self.navigationController?.popViewController(animated: true)
             }
             
             alertControllerOK.addAction(oKAction)

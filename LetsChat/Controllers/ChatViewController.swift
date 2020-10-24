@@ -74,6 +74,7 @@ class ChatViewController: UIViewController {
                     print("Everything is fuckin good")
                 }
             }
+            messageTextField.text = ""
         }
     }
     @IBAction func logOutAction(_ sender: UIBarButtonItem) {
