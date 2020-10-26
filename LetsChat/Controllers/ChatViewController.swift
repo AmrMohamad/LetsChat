@@ -65,7 +65,9 @@ class ChatViewController: UIViewController {
     }
     
     @IBAction func sendAction(_ sender: UIButton) {
-        if let messageBody = messageTextField.text , let messageSender = Auth.auth().currentUser?.email {
+        if messageTextField.text == ""{
+            print("the messageTextField is EMPTY")
+        } else if let messageBody = messageTextField.text , let messageSender = Auth.auth().currentUser?.email {
             db.collection("messages").addDocument(data: [
                 "sender" : messageSender,
                 "body"   : messageBody,
@@ -82,6 +84,7 @@ class ChatViewController: UIViewController {
                 }
             }
         }
+        
     }
     @IBAction func logOutAction(_ sender: UIBarButtonItem) {
         do {
