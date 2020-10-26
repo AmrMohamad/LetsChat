@@ -31,10 +31,15 @@ class ChatViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(false)
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.hidesBackButton = true
-        
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.hidesBackButton = false
     }
     
     func loadMessage (){
