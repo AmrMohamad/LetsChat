@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jar-04-pfh">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jar-04-pfh">
                                 <rect key="frame" x="0.0" y="148.5" width="414" height="713.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
@@ -31,12 +31,16 @@
                         <viewLayoutGuide key="safeArea" id="9Q4-qx-Xq9"/>
                     </view>
                     <navigationItem key="navigationItem" title="👋🏻 LetsChat" id="ST4-xS-LhT">
-                        <barButtonItem key="rightBarButtonItem" title="Log Out" id="4FS-xP-wgz">
+                        <barButtonItem key="leftBarButtonItem" title="Log Out" id="4FS-xP-wgz">
                             <connections>
                                 <action selector="logOutAction:" destination="hcV-D1-irs" id="Cnl-wY-afj"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Create Chat" id="d3J-ak-EuQ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jar-04-pfh" id="3Fi-jS-Gcz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cw-tI-qh3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

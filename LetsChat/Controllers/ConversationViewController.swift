@@ -10,9 +10,13 @@ import UIKit
 import Firebase
 
 class ConversationViewController: UIViewController {
-
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.dataSource = self
+        
+        tableView.register(UINib(nibName: "ConversationCell", bundle: nil), forCellReuseIdentifier: "ConversationCell")
 
         // Do any additional setup after loading the view.
     }
@@ -49,4 +53,17 @@ class ConversationViewController: UIViewController {
     }
     */
 
+}
+
+extension ConversationViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let conversationCell = tableView.dequeueReusableCell(withIdentifier: "ConversationCell", for: indexPath) as! ConversationCell
+        return conversationCell
+    }
+    
+    
 }
