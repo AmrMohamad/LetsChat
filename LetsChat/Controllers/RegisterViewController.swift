@@ -21,6 +21,12 @@ class RegisterViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+    
+    
     @IBAction func registerAction(_ sender: Any) {
         
         if passwordTextField.text == confirmTextField.text {

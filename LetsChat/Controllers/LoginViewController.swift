@@ -21,6 +21,12 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        self.navigationController?.popToRootViewController(animated: false)
+    }
+        
+    
     @IBAction func loginAction(_ sender: UIButton) {
         if let email = emailTextField.text , let password = passwordTextField.text {
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in

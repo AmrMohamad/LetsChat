@@ -20,12 +20,18 @@ class ConversationViewController: UIViewController {
     @IBAction func logOutAction(_ sender: UIBarButtonItem) {
         do {
             try Auth.auth().signOut()
-            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
-            vc.modalPresentationStyle = .automatic
-            self.navigationController?.pushViewController(vc, animated: true)
-                //self.navigationController?.isNavigationBarHidden = true
-            vc.navigationItem.hidesBackButton = true
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let vc = storyboard.instantiateViewController(withIdentifier: "WelcomeViewController")
+//            vc.modalPresentationStyle = .automatic
+//            self.navigationController?.pushViewController(vc, animated: true)
+//            navigationController.
+//                //self.navigationController?.isNavigationBarHidden = true
+//            vc.navigationItem.hidesBackButton = true
+            
+//            let welcomePage = storyboard.instantiateViewController(identifier: "WelcomeViewController") as! WelcomeViewController
+//            self.navigationController?.pushViewController(welcomePage, animated: true)
+            dismiss(animated: true, completion: nil)
+        
             
                     
             } catch let signOutError as NSError {
