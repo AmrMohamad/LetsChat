@@ -36,7 +36,11 @@
                                 <action selector="logOutAction:" destination="hcV-D1-irs" id="Cnl-wY-afj"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Create Chat" id="d3J-ak-EuQ"/>
+                        <barButtonItem key="rightBarButtonItem" title="Create Chat" id="d3J-ak-EuQ">
+                            <connections>
+                                <action selector="createConversation:" destination="hcV-D1-irs" id="Pmk-d5-xfa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="jar-04-pfh" id="3Fi-jS-Gcz"/>

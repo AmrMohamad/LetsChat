@@ -43,6 +43,26 @@ class ConversationViewController: UIViewController {
             }
     }
     
+    
+    @IBAction func createConversation(_ sender: UIBarButtonItem) {
+        let alertControllerCC = UIAlertController.init(title: "Create Chat", message: "++++++++++", preferredStyle: .alert)
+        alertControllerCC.addTextField { (_ textField: UITextField) in
+            textField.placeholder = "Enter the name of your friend"
+        }
+        let createAction = UIAlertAction(title: "LET'S CHAT✊🏻", style: .default, handler: nil)
+//        { _ in
+//            <#code#>
+//        }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertControllerCC.addAction(createAction)
+        alertControllerCC.addAction(cancelAction)
+        self.present(alertControllerCC, animated: true, completion: nil)
+        
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 
