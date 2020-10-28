@@ -14,7 +14,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     
-    let db = Firestore.firestore()
+    let ff = Firestore.firestore()
     
     
     var messages: [Message] = []
@@ -43,7 +43,7 @@ class ChatViewController: UIViewController {
     }
     
     func loadMessage (){
-        db.collection("messages")
+        ff.collection("messages")
             .order(by: "date")
             .addSnapshotListener{ (querySnapshot, error) in
             self.messages = []
@@ -73,7 +73,7 @@ class ChatViewController: UIViewController {
         if messageTextField.text == ""{
             print("the messageTextField is EMPTY")
         } else if let messageBody = messageTextField.text , let messageSender = Auth.auth().currentUser?.email {
-            db.collection("messages").addDocument(data: [
+            ff.collection("messages").addDocument(data: [
                 "sender" : messageSender,
                 "body"   : messageBody,
                 "date"   : Date().timeIntervalSince1970
