@@ -7,11 +7,11 @@
 //
 
 import UIKit
-import CLTypingLabel
+//import CLTypingLabel
 
 class WelcomeViewController: UIViewController {
 
-    @IBOutlet weak var titleTextWelcomeScreen: CLTypingLabel!
+    @IBOutlet weak var titleTextWelcomeScreen: UILabel!
     
     
     override func viewDidLoad() {

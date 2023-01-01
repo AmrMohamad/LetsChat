@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7EF-xd-DjE">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7EF-xd-DjE">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,18 +19,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jar-04-pfh">
-                                <rect key="frame" x="0.0" y="148.5" width="414" height="713.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="152.5" width="414" height="709.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="9Q4-qx-Xq9"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="jar-04-pfh" firstAttribute="top" secondItem="9Q4-qx-Xq9" secondAttribute="top" id="9Sl-p7-qp2"/>
                             <constraint firstItem="9Q4-qx-Xq9" firstAttribute="trailing" secondItem="jar-04-pfh" secondAttribute="trailing" id="Okg-DK-0gA"/>
                             <constraint firstItem="jar-04-pfh" firstAttribute="leading" secondItem="9Q4-qx-Xq9" secondAttribute="leading" id="sZh-1V-z1j"/>
                             <constraint firstItem="9Q4-qx-Xq9" firstAttribute="bottom" secondItem="jar-04-pfh" secondAttribute="bottom" id="uSA-fk-krr"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="9Q4-qx-Xq9"/>
                     </view>
                     <navigationItem key="navigationItem" title="👋🏻 LetsChat" id="ST4-xS-LhT">
                         <barButtonItem key="leftBarButtonItem" title="Log Out" id="4FS-xP-wgz">
@@ -59,8 +61,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rbe-jY-q7r">
-                                <rect key="frame" x="0.0" y="44" width="414" height="748"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <rect key="frame" x="0.0" y="48" width="414" height="744"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ucb-bv-L6A" userLabel="BotView">
                                 <rect key="frame" x="0.0" y="792" width="414" height="70"/>
@@ -99,6 +101,7 @@
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="ztW-0d-hEJ"/>
                         <color key="backgroundColor" name="Purple"/>
                         <constraints>
                             <constraint firstItem="rbe-jY-q7r" firstAttribute="leading" secondItem="KtS-Im-uiI" secondAttribute="leading" id="6Um-RI-hce"/>
@@ -109,7 +112,6 @@
                             <constraint firstItem="ucb-bv-L6A" firstAttribute="bottom" secondItem="ztW-0d-hEJ" secondAttribute="bottom" id="jmY-UO-mlp"/>
                             <constraint firstItem="rbe-jY-q7r" firstAttribute="top" secondItem="ztW-0d-hEJ" secondAttribute="top" id="yfh-ws-t3G"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="ztW-0d-hEJ"/>
                     </view>
                     <connections>
                         <outlet property="messageTextField" destination="hOo-zs-FiK" id="oRP-Xp-GIL"/>
@@ -126,7 +128,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="7EF-xd-DjE" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="rwh-Qn-b14">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -140,12 +142,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paperplane.fill" catalog="system" width="128" height="121"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="119"/>
         <namedColor name="LightPurple">
             <color red="0.98000001907348633" green="0.9649999737739563" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Purple">
             <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

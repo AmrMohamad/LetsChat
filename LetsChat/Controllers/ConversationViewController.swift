@@ -7,13 +7,14 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseAuth
+import FirebaseFirestore
 
 class ConversationViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     var conName: String = ""
     
-    let ff = Firestore.firestore()
+    let db = Firestore.firestore()
     var conversations:[Conversation] = []
     
     override func viewDidLoad() {
@@ -27,7 +28,7 @@ class ConversationViewController: UIViewController {
     }
     
     func loudConversations(){
-        ff.collection("conversations").addSnapshotListener{ (querySnapshot, error) in
+        db.collection("conversations").addSnapshotListener{ (querySnapshot, error) in
             self.conversations = []
             if let e = error {
                 print("There was an issue retrieving data from Firestore. \(e)")
@@ -44,11 +45,8 @@ class ConversationViewController: UIViewController {
                         }
                     }
                 }
-                    
             }
-            
         }
-
     }
     
     
@@ -63,33 +61,33 @@ class ConversationViewController: UIViewController {
     
     
     @IBAction func createConversation(_ sender: UIBarButtonItem) {
-        let alertControllerCC = UIAlertController.init(title: "Create Chat", message: "++++++++++", preferredStyle: .alert)
+        let alertControllerCC = UIAlertController.init(
+            title: "Create Chat",
+            message: "++++++++++",
+            preferredStyle: .alert)
+        
         alertControllerCC.addTextField { (_ textField: UITextField) in
             textField.placeholder = "Enter the name of your friend"
-//            self.conName = textField.text
+            //            self.conName = textField.text
         }
         let createAction = UIAlertAction(title: "LET'S CHAT✊🏻", style: .default)
         { _ in
-//            let conName = alertControllerCC.textFields?.first?.text ?? "no Data"
+            //            let conName = alertControllerCC.textFields?.first?.text ?? "no Data"
             self.conName = alertControllerCC.textFields?.first?.text ?? "no Data"
             
-             let conversationName = self.conName //{
+            let conversationName = self.conName //{
             
-                self.ff.collection("conversations").addDocument(data: [
-                    "conversationName" : conversationName
-                ]){ (error) in
-                    if let e = error{
-                        print("There was an issue saving data to firestore \(e)")
-                    }else{
-                        print("Everything is fuckin good")
-                        print(self.conName)
-                    }
-                    
+            self.db.collection("conversations").addDocument(data: [
+                "conversationName" : conversationName
+            ]){ (error) in
+                if let e = error{
+                    print("There was an issue saving data to firestore \(e)")
+                }else{
+                    print("Everything is fuckin good")
+                    print(self.conName)
                 }
                 
-//            }
-
-
+            }
         }
         
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)

@@ -7,10 +7,13 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseFirestore
+import FirebaseAuth
 
 class RegisterViewController: UIViewController {
 
+    let db = Firestore.firestore()
+    
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmTextField: UITextField!
@@ -35,10 +38,15 @@ class RegisterViewController: UIViewController {
                 Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                     if let e = error {
                         
-                        let alertControllerOK = UIAlertController.init(title: "Someting Wrong", message: e.localizedDescription , preferredStyle: .alert)
+                        let alertControllerOK = UIAlertController.init(
+                            title: "Someting Wrong",
+                            message: e.localizedDescription ,
+                            preferredStyle: .alert)
                         
-                        let oKAction = UIAlertAction(title: "Ok", style: .default)
-                        { _ in
+                        let oKAction = UIAlertAction(
+                            title: "Ok",
+                            style: .default
+                        ){ _ in
                             self.navigationController?.popToRootViewController(animated: true)
                         }
                         
@@ -47,9 +55,8 @@ class RegisterViewController: UIViewController {
                         
                         print(e.localizedDescription)
                     } else{
+                        self.db.collection("users").document("\(Auth.auth().currentUser!)")
                         self.performSegue(withIdentifier: Constants.registerSegue, sender: self)
-                        
-                        
                         
                         //let storyboard = UIStoryboard(name: "Chat", bundle: nil)
                         //let vc = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
@@ -69,10 +76,16 @@ class RegisterViewController: UIViewController {
             
         } else {
             
-            let alertControllerOK = UIAlertController.init(title: "Someting Wrong", message: "It's not the same password Please,Check your Password again", preferredStyle: .alert)
+            let alertControllerOK = UIAlertController.init(
+                title: "Someting Wrong",
+                message: "It's not the same password Please,Check your Password again",
+                preferredStyle: .alert
+            )
             
-            let oKAction = UIAlertAction(title: "Ok", style: .default)
-            { _ in
+            let oKAction = UIAlertAction(
+                title: "Ok",
+                style: .default
+            ){ _ in
                 //self.navigationController?.popViewController(animated: true)
             }
             

@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCC-M4-elY">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="JCC-M4-elY">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,7 +21,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="MVU-As-Uul">
                                 <rect key="frame" x="0.0" y="736" width="414" height="126"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmQ-qg-LKC">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmQ-qg-LKC">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                         <color key="backgroundColor" name="LightBlue"/>
                                         <constraints>
@@ -33,7 +35,7 @@
                                             <segue destination="FQF-9B-A5i" kind="show" id="oaR-LO-l2O"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdR-pA-Ou0">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TdR-pA-Ou0">
                                         <rect key="frame" x="0.0" y="66" width="414" height="60"/>
                                         <color key="backgroundColor" name="Blue"/>
                                         <constraints>
@@ -62,7 +64,8 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MVU-As-Uul" secondAttribute="bottom" id="0xJ-ow-eB6"/>
                             <constraint firstItem="Ua9-VE-cdh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="9tN-qC-sKy"/>
@@ -70,7 +73,6 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MVU-As-Uul" secondAttribute="trailing" id="J6l-B8-Mzx"/>
                             <constraint firstItem="MVU-As-Uul" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Yae-Yf-irL"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="FZe-fT-D9e">
                         <barButtonItem key="backBarButtonItem" title=" " id="u6i-Ep-cIL"/>
@@ -89,7 +91,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JCC-M4-elY" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="q2Y-t9-24D">
-                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <rect key="frame" x="0.0" y="48" width="414" height="104.5"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Purple"/>
                         <textAttributes key="largeTitleTextAttributes">
@@ -114,7 +116,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="MmP-57-g2O">
-                                <rect key="frame" x="25" y="190" width="364" height="192"/>
+                                <rect key="frame" x="25" y="194" width="364" height="192"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="N3g-rA-WTi">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="132"/>
@@ -137,7 +139,7 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-Tn-fey">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JRj-Tn-fey">
                                         <rect key="frame" x="0.0" y="152" width="364" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="NxO-OG-0XF"/>
@@ -153,13 +155,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="5YZ-If-HcY"/>
                         <color key="backgroundColor" name="Blue"/>
                         <constraints>
                             <constraint firstItem="MmP-57-g2O" firstAttribute="top" secondItem="5YZ-If-HcY" secondAttribute="top" constant="50" id="C9A-By-k2W"/>
                             <constraint firstItem="MmP-57-g2O" firstAttribute="leading" secondItem="5YZ-If-HcY" secondAttribute="leading" constant="25" id="fIz-Z4-4cF"/>
                             <constraint firstItem="5YZ-If-HcY" firstAttribute="trailing" secondItem="MmP-57-g2O" secondAttribute="trailing" constant="25" id="fL0-bt-jhC"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="5YZ-If-HcY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Log In" id="yoy-um-4ye"/>
                     <connections>
@@ -191,7 +193,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="44n-fd-v7i">
-                                <rect key="frame" x="25" y="190" width="364" height="268"/>
+                                <rect key="frame" x="25" y="194" width="364" height="268"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Daz-Xn-9Bm">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="208"/>
@@ -222,7 +224,7 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="in8-m4-u1Y">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="in8-m4-u1Y">
                                         <rect key="frame" x="0.0" y="228" width="364" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="s1n-si-8zy"/>
@@ -238,13 +240,13 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="fbi-Np-Ix5"/>
                         <color key="backgroundColor" name="LightBlue"/>
                         <constraints>
                             <constraint firstItem="44n-fd-v7i" firstAttribute="top" secondItem="fbi-Np-Ix5" secondAttribute="top" constant="50" id="DOO-OR-uzJ"/>
                             <constraint firstItem="44n-fd-v7i" firstAttribute="leading" secondItem="fbi-Np-Ix5" secondAttribute="leading" constant="25" id="KGR-lf-gvA"/>
                             <constraint firstItem="fbi-Np-Ix5" firstAttribute="trailing" secondItem="44n-fd-v7i" secondAttribute="trailing" constant="25" id="tqj-1b-Euz"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="fbi-Np-Ix5"/>
                     </view>
                     <navigationItem key="navigationItem" title="Register" id="lmH-Ti-Aqh"/>
                     <connections>
@@ -259,6 +261,9 @@
             <point key="canvasLocation" x="2012" y="-469"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="Ua9-VE-cdh"/>
+    </designables>
     <inferredMetricsTieBreakers>
         <segue reference="s5B-oV-21E"/>
     </inferredMetricsTieBreakers>
@@ -272,5 +277,8 @@
         <namedColor name="Purple">
             <color red="0.67500001192092896" green="0.43500000238418579" blue="0.9179999828338623" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>
